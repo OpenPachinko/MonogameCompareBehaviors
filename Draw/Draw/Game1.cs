@@ -112,8 +112,8 @@ namespace Draw
             // (1) Calling order 
             // DesktopGL: no problem
             // Android  : problem
-            //DrawInstance(gd, view, proj);
-            //DrawSingle(gd, view, proj);
+            DrawInstance(gd, view, proj);
+            DrawSingle(gd, view, proj);
 
             // (2) Calling order
             // DesktopGL: problem
@@ -129,7 +129,7 @@ namespace Draw
             // (4) instance only
             // DesktopGL: no problem
             // Android  : problem
-            DrawInstance(gd, view, proj);
+            //DrawInstance(gd, view, proj);
 
             // change render target
             //gd.SetRenderTarget(null);
@@ -178,7 +178,7 @@ namespace Draw
         void DrawInstance(GraphicsDevice gd, Matrix view, Matrix proj)
         {
             // change render target
-            gd.SetRenderTarget(null);
+            gd.SetRenderTarget(_instanceRT);
 
             // clear
             gd.Clear(Color.LightPink);
