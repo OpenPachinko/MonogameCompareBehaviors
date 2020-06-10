@@ -23,6 +23,7 @@ namespace Draw
         VertexPositionColor[] vertices;
         VertexBuffer vertexBuffer;
 
+        short[] indeces;
         IndexBuffer indexBuffer;
 
         VertexDynamicInstance[] instances;
@@ -73,7 +74,7 @@ namespace Draw
             vertexBuffer.SetData(vertices);
 
             // index buffer
-            var indeces = new short[] { 0, 1, 2 };
+            indeces = new short[] { 0, 1, 2 };
             indexBuffer = new IndexBuffer(gd, IndexElementSize.SixteenBits, indeces.Length, BufferUsage.WriteOnly);
             indexBuffer.SetData(indeces);
 
@@ -111,8 +112,8 @@ namespace Draw
             // (1) Calling order 
             // DesktopGL: no problem
             // Android  : problem
-            DrawInstance(gd, view, proj);
-            DrawSingle(gd, view, proj);
+            //DrawInstance(gd, view, proj);
+            //DrawSingle(gd, view, proj);
 
             // (2) Calling order
             // DesktopGL: problem
@@ -128,18 +129,18 @@ namespace Draw
             // (4) instance only
             // DesktopGL: no problem
             // Android  : problem
-            //DrawInstance(gd, view, proj);
+            DrawInstance(gd, view, proj);
 
             // change render target
-            gd.SetRenderTarget(null);
-            gd.Clear(Color.Blue);
+            //gd.SetRenderTarget(null);
+            //gd.Clear(Color.Blue);
 
-            int w = gd.PresentationParameters.BackBufferWidth;
-            int h = gd.PresentationParameters.BackBufferHeight;
-            _spriteBatch.Begin();
-            _spriteBatch.Draw(_singleRT, new Rectangle(0, 0, w / 2, h / 2), Color.White);
-            _spriteBatch.Draw(_instanceRT, new Rectangle(w / 2, h / 2, w / 2, h / 2), Color.White);
-            _spriteBatch.End();
+            //int w = gd.PresentationParameters.BackBufferWidth;
+            //int h = gd.PresentationParameters.BackBufferHeight;
+            //_spriteBatch.Begin();
+            //_spriteBatch.Draw(_singleRT, new Rectangle(0, 0, w / 2, h / 2), Color.White);
+            //_spriteBatch.Draw(_instanceRT, new Rectangle(w / 2, h / 2, w / 2, h / 2), Color.White);
+            //_spriteBatch.End();
         }
 
         void DrawSingle(GraphicsDevice gd, Matrix view, Matrix proj)
@@ -157,7 +158,7 @@ namespace Draw
                 _singleEffect.Parameters["View"].SetValue(view);
                 _singleEffect.Parameters["Projection"].SetValue(proj);
 
-                gd.SetVertexBuffer(vertexBuffer);
+                gd.SetVertexBuffers(new VertexBufferBinding(vertexBuffer, 0, 0));
                 gd.Indices = indexBuffer;
 
                 foreach (EffectPass pass in _singleEffect.CurrentTechnique.Passes)
@@ -177,7 +178,7 @@ namespace Draw
         void DrawInstance(GraphicsDevice gd, Matrix view, Matrix proj)
         {
             // change render target
-            gd.SetRenderTarget(_instanceRT);
+            gd.SetRenderTarget(null);
 
             // clear
             gd.Clear(Color.LightPink);

@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.0.1375-develop">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0.1375-develop" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".DS_Store" />
+    <None Remove="Content\.DS_Store" />
+    <None Remove="Content\bin\" />
+    <None Remove="Content\obj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\obj\DesktopGL\Content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\bin\DesktopGL\Content\ClearGBuffer.xnb">
+      <Link>Content\ClearGBuffer.xnb</Link>
+      <LogicalName>ClearGBuffer.xnb</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
