@@ -131,16 +131,17 @@ namespace Draw
             // Android  : problem
             //DrawInstance(gd, view, proj);
 
+            // --------
             // change render target
-            //gd.SetRenderTarget(null);
-            //gd.Clear(Color.Blue);
+            gd.SetRenderTarget(null);
+            gd.Clear(Color.Blue);
 
-            //int w = gd.PresentationParameters.BackBufferWidth;
-            //int h = gd.PresentationParameters.BackBufferHeight;
-            //_spriteBatch.Begin();
-            //_spriteBatch.Draw(_singleRT, new Rectangle(0, 0, w / 2, h / 2), Color.White);
-            //_spriteBatch.Draw(_instanceRT, new Rectangle(w / 2, h / 2, w / 2, h / 2), Color.White);
-            //_spriteBatch.End();
+            int w = gd.PresentationParameters.BackBufferWidth;
+            int h = gd.PresentationParameters.BackBufferHeight;
+            _spriteBatch.Begin();
+            _spriteBatch.Draw(_singleRT, new Rectangle(0, 0, w / 2, h / 2), Color.White);
+            _spriteBatch.Draw(_instanceRT, new Rectangle(w / 2, h / 2, w / 2, h / 2), Color.White);
+            _spriteBatch.End();
         }
 
         void DrawSingle(GraphicsDevice gd, Matrix view, Matrix proj)
