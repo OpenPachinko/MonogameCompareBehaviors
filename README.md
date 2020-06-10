@@ -2,7 +2,7 @@
 Let's compare the behavior of MonoGame for each environment.
 
 # build
-MonoGame 3.8.0 can compile programmable shaders (.fx files) on Linux and MacOS.
+MonoGame 3.8.0 can compile programmable shaders (.fx files) on Linux and MacOS!Wow!Great!
 
 ## macOS
 1. install WINE and p7zip
