@@ -1,0 +1,36 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Draw", "Draw", "{37D2BE17-EA6B-4949-B94B-DACDD6B2CA1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Draw", "Draw\Draw\Draw.csproj", "{5D6C9F06-FAEF-44C4-931E-15627BA08315}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Draw.DesktopGL", "Draw\Draw.DesktopGL\Draw.DesktopGL.csproj", "{FFE834FD-39D1-477F-9589-328708DD17E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Draw.Android", "Draw\Draw.Android\Draw.Android.csproj", "{410C0262-131C-4D0E-910D-D01B4F7143E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D6C9F06-FAEF-44C4-931E-15627BA08315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D6C9F06-FAEF-44C4-931E-15627BA08315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D6C9F06-FAEF-44C4-931E-15627BA08315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D6C9F06-FAEF-44C4-931E-15627BA08315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFE834FD-39D1-477F-9589-328708DD17E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFE834FD-39D1-477F-9589-328708DD17E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFE834FD-39D1-477F-9589-328708DD17E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFE834FD-39D1-477F-9589-328708DD17E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{410C0262-131C-4D0E-910D-D01B4F7143E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{410C0262-131C-4D0E-910D-D01B4F7143E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{410C0262-131C-4D0E-910D-D01B4F7143E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{410C0262-131C-4D0E-910D-D01B4F7143E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5D6C9F06-FAEF-44C4-931E-15627BA08315} = {37D2BE17-EA6B-4949-B94B-DACDD6B2CA1C}
+		{FFE834FD-39D1-477F-9589-328708DD17E0} = {37D2BE17-EA6B-4949-B94B-DACDD6B2CA1C}
+		{410C0262-131C-4D0E-910D-D01B4F7143E0} = {37D2BE17-EA6B-4949-B94B-DACDD6B2CA1C}
+	EndGlobalSection
+EndGlobal
