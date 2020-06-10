@@ -18,6 +18,7 @@ chmod +x mgfxc_wine_setup.sh
  echo 'export MGFXC_WINE_PATH="$HOME/.winemonogame"' >> ~/.zprofile
 ```
 
+## Remarks
 The command line (dotnet tool run mgcb) works fine.
 
 However, I cannot understand how to set the “MGFXC_WINE_PATH” environment variable in Visual Studio for Mac.
