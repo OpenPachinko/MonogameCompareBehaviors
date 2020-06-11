@@ -24,8 +24,8 @@ chmod +x mgfxc_wine_setup.sh
 ```
  echo 'export MGFXC_WINE_PATH="$HOME/.winemonogame"' >> ~/.zprofile
 ```
-none: Can be omitted in the latest version of mgfxc_wine_setup.sh.
-note: mgfxc is installed in the "$HOME/.winemonogame" directory.
+- none: Can be omitted in the latest version of mgfxc_wine_setup.sh.
+- note: mgfxc is installed in the "$HOME/.winemonogame" directory.
 
 ## Remarks
 The command line (dotnet tool run mgcb) works fine.
