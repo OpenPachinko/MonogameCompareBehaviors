@@ -17,6 +17,7 @@ chmod +x mgfxc_wine_setup.sh
  echo 'export PATH=$PATH:"/Applications/Wine Stable.app/Contents/Resources/wine/bin/"' >> ~/.zprofile 
  echo 'export MGFXC_WINE_PATH="$HOME/.winemonogame"' >> ~/.zprofile
 ```
+note: mgfxc is installed in the "$HOME/.winemonogame" directory.
 
 ## Remarks
 The command line (dotnet tool run mgcb) works fine.
