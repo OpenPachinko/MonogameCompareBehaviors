@@ -6,6 +6,13 @@ MonoGame 3.8.0 can compile programmable shaders (.fx files) on Linux and MacOS!W
 
 ## macOS
 1. install WINE and p7zip
+```
+brew update
+brew install p7zip
+brew cask install xquartz
+brew cask install wine-stable
+```
+
 2. install mgfxc
 ```
 curl -O https://raw.githubusercontent.com/MonoGame/MonoGame/develop/Tools/MonoGame.Effect.Compiler/mgfxc_wine_setup.sh
