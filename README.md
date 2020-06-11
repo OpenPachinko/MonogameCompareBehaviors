@@ -20,7 +20,7 @@ chmod +x mgfxc_wine_setup.sh
 ./mgfxc_wine_setup.sh
 ```
 3. add environment variables
-
+zsh
 ```
  echo 'export MGFXC_WINE_PATH="$HOME/.winemonogame"' >> ~/.zprofile
 ```
