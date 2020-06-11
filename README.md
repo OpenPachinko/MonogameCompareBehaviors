@@ -20,8 +20,8 @@ chmod +x mgfxc_wine_setup.sh
 ./mgfxc_wine_setup.sh
 ```
 3. add environment variables
+
 ```
- echo 'export PATH=$PATH:"/Applications/Wine Stable.app/Contents/Resources/wine/bin/"' >> ~/.zprofile 
  echo 'export MGFXC_WINE_PATH="$HOME/.winemonogame"' >> ~/.zprofile
 ```
 note: mgfxc is installed in the "$HOME/.winemonogame" directory.
